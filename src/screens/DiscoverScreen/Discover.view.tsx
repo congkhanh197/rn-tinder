@@ -18,7 +18,7 @@ const DiscoverView: React.FC<IProps> = props => {
   const onSwipedRight = (index: number) => {
     props.addFavoritePeopleAction([...props.favoriteList, props.infos[index]]);
   };
-
+  
   return (
     <View style={{flex: 1, backgroundColor: 'lightgray'}}>
       <CardStack
