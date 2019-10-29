@@ -31,7 +31,6 @@ FavoriteStack.navigationOptions = {
     <FavoriteIconWithBadge
       name={Platform.OS === 'ios' ? 'ios-heart' : 'md-heart'}
       size={26}
-      style={{marginBottom: -3}}
       color={param.focused ? Colors.tabIconSelected : Colors.tabIconDefault}
     />
   ),

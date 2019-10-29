@@ -2,7 +2,7 @@ import {call, put, takeLatest, takeEvery} from 'redux-saga/effects';
 import * as C from '../constants';
 import {storeData, retrieveData} from '../../utils/persistUtils';
 
-function* retrieveFavoritePeopleData(action: {type: string; payload: any}) {
+function* retrieveFavoritePeopleData() {
   try {
     const data = yield call(retrieveData, C.FAVORITE_DATA);
     if (data) {

@@ -7,11 +7,10 @@ interface IProps {
   name: string;
   color: string;
   size: number;
-  badgeCount: number;
   peopleList: IPeopleResponse[];
 }
 
-const FavoriteIconWithBadge: React.FC<IProps> = props => {
+const FavoriteIconWithBadge = (props: IProps) => {
   return <IconWithBadge {...props} badgeCount={props.peopleList.length} />;
 };
 
