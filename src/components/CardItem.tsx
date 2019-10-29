@@ -8,7 +8,7 @@ const COLORS = {
   disable: 'gray',
 };
 
-interface IProps {
+export interface IPeopleInfo {
   picture: string;
   info: {
     title: string;
@@ -17,7 +17,7 @@ interface IProps {
   }[];
 }
 
-const CardItem: React.FC<IProps> = props => {
+const CardItem: React.FC<IPeopleInfo> = props => {
   const [chooseIndex, setChooseIndex] = useState(0);
   const {picture, info} = props;
   return (

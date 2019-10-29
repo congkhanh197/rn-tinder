@@ -1,8 +1,7 @@
-import * as C from "../constants";
+import * as C from '../constants';
 
-const getPersonInfoAction = payload => ({
+const getPersonInfoAction = () => ({
   type: C.GET_PERSON_INFO_REQUEST,
-  payload
 });
 
-export { getPersonInfoAction };
+export {getPersonInfoAction};

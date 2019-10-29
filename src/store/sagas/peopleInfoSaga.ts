@@ -2,7 +2,7 @@ import { call, put, takeLatest } from "redux-saga/effects";
 import * as C from "../constants";
 import Api from "../../api";
 
-function* getPeopleInfo(action) {
+function* getPeopleInfo() {
   try {
     const response = yield call(Api.getPeopleInfo);
     yield put({

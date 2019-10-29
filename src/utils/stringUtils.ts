@@ -1,48 +1,50 @@
-import moment from "moment";
+import moment from 'moment';
+import {IPeopleResponse} from '../store/reducers/peopleInfoReducer';
+import {IPeopleInfo} from 'src/components/CardItem';
 
-const upperFirst = str => {
-  if (typeof str !== "string") return "";
+const upperFirst = (str: any) => {
+  if (typeof str !== 'string') return '';
   return str
-    .split(" ")
+    .split(' ')
     .map(item => item.charAt(0).toUpperCase() + item.slice(1))
-    .join(" ");
+    .join(' ');
 };
 
-const formatPeopleInfo = peopleInfo => ({
+const formatPeopleInfo = (peopleInfo: IPeopleResponse): IPeopleInfo => ({
   picture: peopleInfo.picture,
   info: [
     {
-      iconName: "user-o",
-      title: "My name is",
+      iconName: 'user-o',
+      title: 'My name is',
       value: upperFirst(
         peopleInfo.name.title +
-          ". " +
+          '. ' +
           peopleInfo.name.first +
-          " " +
-          peopleInfo.name.last
-      )
+          ' ' +
+          peopleInfo.name.last,
+      ),
     },
     {
-      iconName: "calendar",
-      title: "My birthday is",
-      value: moment.unix(peopleInfo.dob).format("D/M/YYYY")
+      iconName: 'calendar',
+      title: 'My birthday is',
+      value: moment.unix(parseInt(peopleInfo.dob)).format('D/M/YYYY'),
     },
     {
-      iconName: "map-o",
-      title: "My address is",
-      value: upperFirst(peopleInfo.location.street)
+      iconName: 'map-o',
+      title: 'My address is',
+      value: upperFirst(peopleInfo.location.street),
     },
     {
-      iconName: "phone",
-      title: "My phone is",
-      value: peopleInfo.phone
+      iconName: 'phone',
+      title: 'My phone is',
+      value: peopleInfo.phone,
     },
     {
-      iconName: "lock",
-      title: "My password is",
-      value: peopleInfo.password
-    }
-  ]
+      iconName: 'lock',
+      title: 'My password is',
+      value: peopleInfo.password,
+    },
+  ],
 });
 
-export { upperFirst, formatPeopleInfo };
+export {upperFirst, formatPeopleInfo};

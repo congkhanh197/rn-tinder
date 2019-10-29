@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {SafeAreaView} from 'react-native';
 import {connect} from 'react-redux';
 import FavoriteView from './Favorite.view';
+import {IPeopleResponse} from '../../store/reducers/peopleInfoReducer';
 
 export class FavoriteScreen extends Component {
   static navigationOptions = {
@@ -16,7 +17,9 @@ export class FavoriteScreen extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state: {
+  favoriteReducer: {peopleList: IPeopleResponse[]};
+}) => ({
   peopleList: state.favoriteReducer.peopleList,
 });
 

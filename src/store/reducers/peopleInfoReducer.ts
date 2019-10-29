@@ -1,28 +1,53 @@
-import * as C from "../constants";
+import * as C from '../constants';
 
-const initialState = {
+export interface IPeopleResponse {
+  md5: string;
+  picture: string;
+  name: {
+    title: string;
+    first: string;
+    last: string;
+  };
+  dob: string;
+  location: {
+    street: string;
+  };
+  phone: string;
+  password: string;
+}
+
+interface IPeopleState {
+  infos: IPeopleResponse[];
+  loading: boolean;
+  error: any;
+}
+const initialState: IPeopleState = {
   infos: [],
   loading: true,
-  error: null
+  error: null,
 };
 
-export default (state = initialState, { type, payload }) => {
-  switch (type) {
+const peopleInfoReducer = (
+  state = initialState,
+  action: {type: string; payload: any},
+) => {
+  switch (action.type) {
     case C.GET_PERSON_INFO_REQUEST:
-      return { ...state, loading: true };
+      return {...state, loading: true};
     case C.GET_PERSON_INFO_SUCCESS:
       return {
         ...state,
         loading: false,
-        infos: [...state.infos, payload]
+        infos: [...state.infos, action.payload],
       };
     case C.GET_PERSON_INFO_FAILURE:
       return {
         ...state,
         loading: false,
-        error: payload
+        error: action.payload,
       };
     default:
       return state;
   }
 };
+export default peopleInfoReducer;
