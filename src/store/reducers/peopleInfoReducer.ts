@@ -33,11 +33,12 @@ const peopleInfoReducer = (
 ) => {
   switch (action.type) {
     case C.GET_PERSON_INFO_REQUEST:
-      return {...state, loading: true, infos: []};
+      return {...state, loading: true, infos: [], error: null};
     case C.GET_PERSON_INFO_SUCCESS:
       return {
         ...state,
         loading: false,
+        error: null,
         infos: [action.payload],
       };
     case C.GET_PERSON_INFO_FAILURE:

@@ -32,5 +32,5 @@ function* peopleInfoSaga() {
   yield takeLatest(C.RETRIEVE_FAVORITE_PEOPLE_DATA, retrieveFavoritePeopleData);
   yield takeEvery(C.ADD_PERSON_FAVORITE, saveFavoritePeopleData);
 }
-
+export {saveFavoritePeopleData, retrieveFavoritePeopleData};
 export default peopleInfoSaga;

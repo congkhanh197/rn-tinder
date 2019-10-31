@@ -30,14 +30,22 @@
     "@babel/core": "^7.6.2",
     "@babel/runtime": "^7.6.2",
     "@react-native-community/eslint-config": "^0.0.5",
+    "@types/enzyme": "^3.10.3",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
     "@types/jest": "^24.0.18",
+    "@types/jsdom": "^12.2.4",
     "@types/react-native": "^0.60.21",
     "@types/react-native-vector-icons": "^6.4.4",
     "@types/react-redux": "^7.1.5",
     "@types/react-test-renderer": "16.9.0",
     "babel-jest": "^24.9.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
     "jest": "^24.9.0",
+    "jest-enzyme": "^7.1.2",
+    "jsdom": "^15.2.0",
     "metro-react-native-babel-preset": "^0.56.0",
+    "react-dom": "^16.11.0",
     "react-test-renderer": "16.9.0",
     "typescript": "^3.6.3"
   },
@@ -50,6 +58,16 @@
       "jsx",
       "json",
       "node"
-    ]
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "babel-jest"
+    },
+    "setupFilesAfterEnv": [
+      "./jest/setupEnzyme.ts"
+    ],
+    "testEnvironment": "enzyme",
+    "testEnvironmentOptions": {
+      "enzymeAdapter": "react16"
+    }
   }
 }
