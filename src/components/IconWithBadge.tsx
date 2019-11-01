@@ -2,13 +2,13 @@ import React from 'react';
 import {View, Text} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-interface IProps {
+export interface IProps {
   name: string;
   badgeCount: number;
   color: string;
   size: number;
 }
-const IconWithBadge: React.FC<IProps> = props => {
+const IconWithBadge = (props: IProps) => {
   const {name, badgeCount, color, size} = props;
   return (
     <View style={{width: 24, height: 24, margin: 5}}>

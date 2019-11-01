@@ -1,11 +1,11 @@
-import {getPeopleInfo} from '../peopleInfoSaga';
+import peopleInfoSaga, {getPeopleInfo} from '../peopleInfoSaga';
 import {runSaga} from 'redux-saga';
 import * as C from '../../constants';
 import Api from '../../../api';
 
 jest.mock('../../../api');
 
-const getPeopleInfoMock = Api.getPeopleInfo as jest.Mock<any>
+const getPeopleInfoMock = Api.getPeopleInfo as jest.Mock<any>;
 describe('Test people info saga', () => {
   test('get people data', async () => {
     const dispatched: any[] = [];
@@ -38,7 +38,7 @@ describe('Test people info saga', () => {
         type: C.GET_PERSON_INFO_SUCCESS,
       },
     ]);
-    getPeopleInfoMock.mockRestore()
+    getPeopleInfoMock.mockRestore();
   });
   test('get people data with error', async () => {
     const dispatched: any[] = [];
@@ -61,5 +61,6 @@ describe('Test people info saga', () => {
         type: C.GET_PERSON_INFO_FAILURE,
       },
     ]);
-  });
+    getPeopleInfoMock.mockRestore();
+  });  
 });

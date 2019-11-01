@@ -1,4 +1,4 @@
-import {shallow, render, mount, configure} from 'enzyme';
+import { configure } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
 import {JSDOM} from 'jsdom';
 
@@ -11,10 +11,6 @@ function copyProps(src: any, target: any) {
     ...Object.getOwnPropertyDescriptors(target),
   });
 }
-
-global.shallow = shallow;
-global.render = render;
-global.mount = mount;
 
 global.window = window;
 global.document = window.document;

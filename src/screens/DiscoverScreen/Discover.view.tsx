@@ -1,13 +1,12 @@
-import React, {Component} from 'react';
-import {Text, View} from 'react-native';
-
+import React from 'react';
+import {View} from 'react-native';
 import CardStack, {Card} from 'react-native-card-stack-swiper';
 import CardItem from '../../components/CardItem';
 import LoadingCard from './components/LoadingCard';
 import {formatPeopleInfo} from '../../utils/stringUtils';
 import {IPeopleResponse} from '../../store/reducers/peopleInfoReducer';
 
-interface IProps {
+export interface IProps {
   addFavoritePeopleAction: any;
   favoriteList: IPeopleResponse[];
   infos: IPeopleResponse[];

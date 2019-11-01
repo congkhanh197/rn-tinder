@@ -4,7 +4,7 @@ import CardItem from '../../components/CardItem';
 import {formatPeopleInfo} from '../../utils/stringUtils';
 import {IPeopleResponse} from '../../store/reducers/peopleInfoReducer';
 
-interface IProps {
+export interface IProps {
   peopleList: IPeopleResponse[];
 }
 const FavoriteView: React.FC<IProps> = props => {

@@ -2,12 +2,12 @@ import React from 'react';
 import Icons from 'react-native-vector-icons/Ionicons';
 import Colors from '../constants/Colors';
 
-interface IProps {
+export interface IProps {
   name: string;
   focused: boolean;
 }
 
-const TabBarIcon: React.FC<IProps> = props => {
+const TabBarIcon = (props: IProps) => {
   return (
     <Icons
       name={props.name}
