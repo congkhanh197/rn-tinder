@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import DiscoverView from './Discover.view';
-import {SafeAreaView, Text, View} from 'react-native';
+import {SafeAreaView} from 'react-native';
 import {connect} from 'react-redux';
 
 import {getPersonInfoAction} from '../../store/actions';

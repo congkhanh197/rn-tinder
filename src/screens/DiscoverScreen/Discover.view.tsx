@@ -13,11 +13,11 @@ export interface IProps {
   getPersonInfoAction: any;
 }
 
-const DiscoverView: React.FC<IProps> = props => {
+const DiscoverView = (props: IProps) => {
   const onSwipedRight = (index: number) => {
     props.addFavoritePeopleAction([...props.favoriteList, props.infos[index]]);
   };
-  
+
   return (
     <View style={{flex: 1, backgroundColor: 'lightgray'}}>
       <CardStack

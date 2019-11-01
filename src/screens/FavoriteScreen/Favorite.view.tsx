@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, FlatList} from 'react-native';
+import {View, FlatList} from 'react-native';
 import CardItem from '../../components/CardItem';
 import {formatPeopleInfo} from '../../utils/stringUtils';
 import {IPeopleResponse} from '../../store/reducers/peopleInfoReducer';
@@ -7,7 +7,7 @@ import {IPeopleResponse} from '../../store/reducers/peopleInfoReducer';
 export interface IProps {
   peopleList: IPeopleResponse[];
 }
-const FavoriteView: React.FC<IProps> = props => {
+const FavoriteView = (props: IProps) => {
   return (
     <View style={{flex: 1, backgroundColor: 'lightgray'}}>
       <FlatList
