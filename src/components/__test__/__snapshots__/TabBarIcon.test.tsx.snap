@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Tab bar icon should render no focused 1`] = `
+<Text
+  allowFontScaling={false}
+  style={
+    Array [
+      Object {
+        "color": "#ccc",
+        "fontSize": 26,
+      },
+      undefined,
+      Object {
+        "fontFamily": "Ionicons",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {},
+    ]
+  }
+>
+  ?
+</Text>
+`;
+
+exports[`Test Tab bar icon should render with focused 1`] = `
+<Text
+  allowFontScaling={false}
+  style={
+    Array [
+      Object {
+        "color": "#2f95dc",
+        "fontSize": 26,
+      },
+      undefined,
+      Object {
+        "fontFamily": "Ionicons",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {},
+    ]
+  }
+>
+  ?
+</Text>
+`;

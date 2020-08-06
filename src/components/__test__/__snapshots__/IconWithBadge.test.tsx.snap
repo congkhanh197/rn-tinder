@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Card Item should render 1`] = `
+<View
+  style={
+    Object {
+      "height": 24,
+      "margin": 5,
+      "width": 24,
+    }
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": "blue",
+          "fontSize": 23,
+        },
+        undefined,
+        Object {
+          "fontFamily": "Ionicons",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {},
+      ]
+    }
+  >
+    ?
+  </Text>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "red",
+        "borderRadius": 6,
+        "height": 12,
+        "justifyContent": "center",
+        "position": "absolute",
+        "right": -6,
+        "top": -3,
+        "width": 12,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 10,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      1
+    </Text>
+  </View>
+</View>
+`;
